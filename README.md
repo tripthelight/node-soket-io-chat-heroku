@@ -15,3 +15,5 @@
 3. npm install
 - npm i express
 - npm i -g heroku
+- npm i socket.io
+- npm i -g nodemon
