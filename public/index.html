@@ -5,18 +5,35 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SOCKET IO CHAT</title>
+
+  <link rel="stylesheet" href="/css/common.css" />
+  <link rel="stylesheet" href="/css/index.css" />
 </head>
 <body>
-  <p>Welcome to the chat app :)</p>
+  <div class="chat">
+    <dl class="people-block">
+      <dt><h4>PEOPLE</h4></dt>
+      <dd>
+        <ul></ul>
+      </dd>
+    </dl>
+    <dl class="message-block">
+      <dt>
+        <ul></ul>
+      </dt>
+      <dd>
+        <form id="message-form">
+          <input type="text" name="message" placeholder="message" />
+          <button type="submit" id="submit-btn">Submit</button>
+        </form>
+        <button type="button" id="send-location">Send Location</button>
+      </dd>
+    </dl>
+  </div>
 
-  <form id="message-form">
-    <input type="text" name="message" placeholder="message" />
-    <button type="submit" id="submit-btn">Submit</button>
-  </form>
-
-  <button type="button" id="send-location">Send Location</button>
 
   <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/libs/moment.js"></script>
   <script src="/js/index.js"></script>
   
 </body>

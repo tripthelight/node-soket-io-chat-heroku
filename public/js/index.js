@@ -10,21 +10,23 @@ socket.on('disconnect', function () {
 
 socket.on('newMessage', function (message) {
   console.log('newMessage : ', message);
+  const list = document.querySelector('.message-block dt ul');
   let li = document.createElement('li');
   // li.innerText = `${message.from} : ${message.text}`;
   li.innerText = message.from + ' : ' + message.text;
-  document.querySelector('body').appendChild(li);
+  list.appendChild(li);
 });
 
 socket.on('newLocationMessage', function (message) {
   console.log('newLocationMessage : ', message);
+  const list = document.querySelector('.message-block dt ul');
   let li = document.createElement('li');
   let a = document.createElement('a');
   a.setAttribute('target', '_blank');
   a.setAttribute('href', message.url);
   a.innerText = 'My Current Location'; 
   li.appendChild(a);
-  document.querySelector('body').appendChild(li);
+  list.appendChild(li);
 });
 
 // socket.emit('createMessage', {

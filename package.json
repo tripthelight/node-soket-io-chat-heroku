@@ -25,7 +25,7 @@
   "homepage": "https://github.com/tripthelight/node-soket-io-chat-heroku#readme",
   "dependencies": {
     "express": "^4.16.4",
-    "moment": "^2.23.0",
+    "moment": "^2.29.4",
     "socket.io": "^2.2.0"
   },
   "devDependencies": {
