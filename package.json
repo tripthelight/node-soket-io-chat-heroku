@@ -4,6 +4,7 @@
   "description": "1. OPEN APP\r -",
   "main": "index.js",
   "scripts": {
+    "dev-start": "nodemon server/server.js",
     "start": "npm ci && node server/server.js",
     "test": "mocha server/**/*.test.js",
     "test-watch": "nodemon --exec \"npm test\""
