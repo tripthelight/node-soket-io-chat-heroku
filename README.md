@@ -21,5 +21,5 @@
 - npm i moment
 
 4. YOUTUBE
-- https://www.youtube.com/watch?v=bcnRbcVy3pU&list=PLrwNNiB6YOA1a0_xXvogmvSHrLcanVKkF&index=5&ab_channel=WebDevJourney
-- 00:00
+- https://www.youtube.com/watch?v=5cEGKQRDB64&list=PLrwNNiB6YOA1a0_xXvogmvSHrLcanVKkF&index=6&ab_channel=WebDevJourney
+- 15:33

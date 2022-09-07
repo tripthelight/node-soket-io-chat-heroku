@@ -8,20 +8,34 @@ socket.on('disconnect', function () {
   console.log('disconnect from Server');
 });
 
+/**
+ * document draw message in li
+ */
 socket.on('newMessage', function (message) {
-  console.log('newMessage : ', message);
-  const list = document.querySelector('.message-block dt ul');
-  let li = document.createElement('li');
-  // li.innerText = `${message.from} : ${message.text}`;
-  li.innerText = message.from + ' : ' + message.text;
-  list.appendChild(li);
+  const template = document.querySelector('#message-template').innerHTML;
+  const html = Mustache.render(template);
+  document.getElementById('messageList').innerHTML = html;
+  console.log(html);
+
+  // console.log('newMessage : ', message);
+  // const formattedTime = moment(message.createdAt).format('LT');
+  // const list = document.querySelector('.message-block dt ul');
+  // let li = document.createElement('li');
+  // // li.innerText = `${message.from} : ${message.text}`;
+  // li.innerText = message.from + ' ' + formattedTime + ' : ' + message.text;
+  // list.appendChild(li);
 });
 
+/**
+ * document draw location link in li
+ */
 socket.on('newLocationMessage', function (message) {
   console.log('newLocationMessage : ', message);
+  const formattedTime = moment(message.createdAt).format('LT');
   const list = document.querySelector('.message-block dt ul');
   let li = document.createElement('li');
   let a = document.createElement('a');
+  li.innerText = message.from + ' ' + formattedTime + ' : ';
   a.setAttribute('target', '_blank');
   a.setAttribute('href', message.url);
   a.innerText = 'My Current Location'; 
@@ -52,7 +66,7 @@ document.querySelector('#submit-btn').addEventListener('click', function(e) {
 /**
  * location button click event
  */
- document.querySelector('#send-location').addEventListener('click', function(e) {
+document.querySelector('#send-location').addEventListener('click', function(e) {
   if (!navigator.geolocation) return alert('Geolocation is not supported by your browser :(');
 
   navigator.geolocation.getCurrentPosition(function (position) {

@@ -19,7 +19,7 @@
     </dl>
     <dl class="message-block">
       <dt>
-        <ul></ul>
+        <ul id="messageList"></ul>
       </dt>
       <dd>
         <form id="message-form">
@@ -31,9 +31,14 @@
     </dl>
   </div>
 
+  <script id="message-template" type="text/template">
+    <p>this is a paragraph</p>
+  </script>
+
 
   <script src="/socket.io/socket.io.js"></script>
   <script src="/js/libs/moment.js"></script>
+  <script src="/js/libs/mustache.js"></script>
   <script src="/js/index.js"></script>
   
 </body>
