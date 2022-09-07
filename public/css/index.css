@@ -10,6 +10,8 @@ dl.people-block {
   background-color: rgb(45, 129, 255);
   padding: 10px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 dl.people-block dt,
 dl.people-block dd {
@@ -20,6 +22,10 @@ dl.people-block dt h4 {
   color: #FFF;
   text-align: left;
 }
+dl.people-block dd {
+  flex-grow: 1;
+  overflow-y: auto;
+}
 dl.people-block dd ul {
   display: block;
 }
@@ -28,6 +34,10 @@ dl.people-block dd ul li {
   padding: 10px;
   background-color: #FFF;
   box-sizing: border-box;
+  margin-top: 10px;
+}
+dl.people-block dd ul li:first-child {
+  margin-top: 0;
 }
 
 dl.message-block {
@@ -43,9 +53,17 @@ dl.message-block dt {
   flex-grow: 1;
   padding: 10px;
   box-sizing: border-box;
+  overflow-y: auto;
 }
 dl.message-block dt ul {
-
+  display: block;
+  overflow-y: auto;
+}
+dl.message-block dt ul li {
+  margin-top: 10px;
+}
+dl.message-block dt ul li:first-child {
+  margin-top: 0;
 }
 dl.message-block dd {
   display: flex;
