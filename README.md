@@ -32,4 +32,4 @@
 
 5. YOUTUBE
 - https://www.youtube.com/watch?v=5PVp4Wjvl3g&list=PLrwNNiB6YOA1a0_xXvogmvSHrLcanVKkF&index=7&ab_channel=WebDevJourney
-- 15:33
+- 13:00
