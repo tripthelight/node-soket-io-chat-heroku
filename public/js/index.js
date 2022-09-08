@@ -1,5 +1,10 @@
 let socket = io();
 
+function scrollToBottom() {
+  let messages = document.getElementById('messageList').lastElementChild;
+  messages.scrollIntoView();
+}
+
 socket.on('connect', function () {
   console.log('connect to Server');
 });
@@ -23,6 +28,7 @@ socket.on('newMessage', function (message) {
   ON_LI.innerHTML = html;
   document.getElementById('messageList').appendChild(ON_LI);
 
+  scrollToBottom();
   // console.log('newMessage : ', message);
   // const formattedTime = moment(message.createdAt).format('LT');
   // const list = document.querySelector('.message-block dt ul');

@@ -1,0 +1,10 @@
+@font-face{
+  font-family:'NanumGothic';
+  font-weight: 700;
+  src:url('/font/NanumGothic/NanumGothic.eot');
+  src:local('?'),
+  url('/font/NanumGothic/NanumGothic.woff') format('woff'),
+  url('/font/NanumGothic/NanumGothic.woff2') format('woff2'),
+  url('/font/NanumGothic/NanumGothic.ttf') format('truetype'),
+  url('/font/NanumGothic/NanumGothic.svg#webfontdeSVIj0D') format('svg');
+}
