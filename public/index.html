@@ -32,9 +32,20 @@
   </div>
 
   <script id="message-template" type="text/template">
-    <p>this is a paragraph</p>
+    <dl>
+      <dt>{{from}}</dt>
+      <dd>{{createdAt}}</dd>
+    </dl>
+    <p>{{text}}</p>
   </script>
 
+  <script id="location-message-template" type="text/template">
+    <dl>
+      <dt>{{from}}</dt>
+      <dd>{{createdAt}}</dd>
+    </dl>
+    Link : <a href="{{url}}" target="_blank" title="move page">My Current Location</a>
+  </script>
 
   <script src="/socket.io/socket.io.js"></script>
   <script src="/js/libs/moment.js"></script>

@@ -9,6 +9,9 @@ html, body {
 ul, ol, li, dl, dt, dd {
   list-style-type: none;
 }
+a {
+  color: #000;
+}
 button {
   border: 0 none;
   border-radius: 0;

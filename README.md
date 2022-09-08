@@ -1,9 +1,19 @@
 ### NODE SOKET IO HEROKU
 
-1. OPEN APP
+1. HEROKU DOMAIN NOPEN APP
 - https://desolate-spire-35318.herokuapp.com/
 
-2. vscode extension
+2. RUN ORDER
+- git clone https://github.com/tripthelight/node-soket-io-chat-heroku.git
+- npm ci
+- npm i -g nodemon
+- npm run dev-start
+- http://localhost:3000/
+
+2. USE FRONT TEMPLATE
+- mustache
+
+3. VSCODE EXTENSION
 - Material theme
 - Material icon theme
 - Prettier
@@ -12,7 +22,7 @@
 - Auto rename tag
 - json pretty printer(ctrl + shift + j)
 
-3. npm install
+4. NPM INSTALL
 - npm i express
 - npm i -g heroku
 - npm i socket.io
@@ -20,6 +30,6 @@
 - npm i expect mocha --save-dev
 - npm i moment
 
-4. YOUTUBE
-- https://www.youtube.com/watch?v=5cEGKQRDB64&list=PLrwNNiB6YOA1a0_xXvogmvSHrLcanVKkF&index=6&ab_channel=WebDevJourney
+5. YOUTUBE
+- https://www.youtube.com/watch?v=5PVp4Wjvl3g&list=PLrwNNiB6YOA1a0_xXvogmvSHrLcanVKkF&index=7&ab_channel=WebDevJourney
 - 15:33

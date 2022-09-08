@@ -12,10 +12,16 @@ socket.on('disconnect', function () {
  * document draw message in li
  */
 socket.on('newMessage', function (message) {
+  const formattedTime = moment(message.createdAt).format('LT');
   const template = document.querySelector('#message-template').innerHTML;
-  const html = Mustache.render(template);
-  document.getElementById('messageList').innerHTML = html;
-  console.log(html);
+  const html = Mustache.render(template, {
+    from: message.from,
+    text: message.text,
+    createdAt: formattedTime
+  });
+  const ON_LI = document.createElement('li');
+  ON_LI.innerHTML = html;
+  document.getElementById('messageList').appendChild(ON_LI);
 
   // console.log('newMessage : ', message);
   // const formattedTime = moment(message.createdAt).format('LT');
@@ -30,17 +36,30 @@ socket.on('newMessage', function (message) {
  * document draw location link in li
  */
 socket.on('newLocationMessage', function (message) {
-  console.log('newLocationMessage : ', message);
   const formattedTime = moment(message.createdAt).format('LT');
-  const list = document.querySelector('.message-block dt ul');
-  let li = document.createElement('li');
-  let a = document.createElement('a');
-  li.innerText = message.from + ' ' + formattedTime + ' : ';
-  a.setAttribute('target', '_blank');
-  a.setAttribute('href', message.url);
-  a.innerText = 'My Current Location'; 
-  li.appendChild(a);
-  list.appendChild(li);
+  
+  const template = document.querySelector('#location-message-template').innerHTML;
+  const html = Mustache.render(template, {
+    from: message.from,
+    url: message.url,
+    createdAt: formattedTime
+  });
+
+  const ON_LI = document.createElement('li');
+  ON_LI.innerHTML = html;
+  document.getElementById('messageList').appendChild(ON_LI);
+  
+  // console.log('newLocationMessage : ', message);
+  // const formattedTime = moment(message.createdAt).format('LT');
+  // const list = document.querySelector('.message-block dt ul');
+  // let li = document.createElement('li');
+  // let a = document.createElement('a');
+  // li.innerText = message.from + ' ' + formattedTime + ' : ';
+  // a.setAttribute('target', '_blank');
+  // a.setAttribute('href', message.url);
+  // a.innerText = 'My Current Location'; 
+  // li.appendChild(a);
+  // list.appendChild(li);
 });
 
 // socket.emit('createMessage', {

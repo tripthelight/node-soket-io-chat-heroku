@@ -45,52 +45,70 @@ dl.message-block {
   display: flex;
   flex-direction: column;
 }
-dl.message-block dt,
-dl.message-block dd {
+dl.message-block > dt,
+dl.message-block > dd {
 
 }
-dl.message-block dt {
+dl.message-block > dt {
   flex-grow: 1;
   padding: 10px;
   box-sizing: border-box;
   overflow-y: auto;
 }
-dl.message-block dt ul {
+dl.message-block > dt ul {
   display: block;
   overflow-y: auto;
 }
-dl.message-block dt ul li {
-  margin-top: 10px;
+dl.message-block > dt ul li {
+  margin-top: 16px;
 }
-dl.message-block dt ul li:first-child {
+dl.message-block > dt ul li:first-child {
   margin-top: 0;
 }
-dl.message-block dd {
+
+#messageList li dl {
+  display: flex;
+}
+#messageList li dl dt {
+  font-weight: bold;
+}
+#messageList li dl dd {
+  margin-left: 10px;
+  color: rgb(151, 151, 151);
+}
+#messageList li p,
+#messageList li a {
+  margin-top: 10px;
+  word-break: break-all;
+  display: inline-block;
+}
+
+dl.message-block > dd {
   display: flex;
   padding: 10px;
   box-sizing: border-box;
   background-color: rgb(223, 223, 223);
 }
-dl.message-block dd #message-form {
+dl.message-block #message-form {
   flex-grow: 1;
   display: flex;
   height: 50px;
 }
-dl.message-block dd #message-form input[type="text"] {
+dl.message-block #message-form input[type="text"] {
   flex-grow: 1;
   padding: 10px;
   box-sizing: border-box;
   font-size: 20px;
 }
-dl.message-block dd #message-form button#submit-btn,
-dl.message-block dd button#send-location {
+dl.message-block #message-form button#submit-btn,
+dl.message-block button#send-location {
   background-color: rgb(45, 129, 255);
   color: #FFF;
   padding: 0 10px;
 }
-dl.message-block dd #message-form button#submit-btn {
+dl.message-block #message-form button#submit-btn {
   margin-left: 10px;
 }
-dl.message-block dd button#send-location {
+dl.message-block button#send-location {
   margin-left: 10px;
 }
