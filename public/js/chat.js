@@ -54,6 +54,8 @@ socket.on('newLocationMessage', function (message) {
   const ON_LI = document.createElement('li');
   ON_LI.innerHTML = html;
   document.getElementById('messageList').appendChild(ON_LI);
+
+  scrollToBottom();
   
   // console.log('newLocationMessage : ', message);
   // const formattedTime = moment(message.createdAt).format('LT');

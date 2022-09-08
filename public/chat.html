@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOCKET IO CHAT</title>
+
+  <link rel="stylesheet" href="/css/font.css" />
+  <link rel="stylesheet" href="/css/common.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+</head>
+<body>
+  <div class="chat">
+    <dl class="people-block">
+      <dt><h4>PEOPLE</h4></dt>
+      <dd>
+        <ul></ul>
+      </dd>
+    </dl>
+    <dl class="message-block">
+      <dt>
+        <ul id="messageList"></ul>
+      </dt>
+      <dd>
+        <form id="message-form">
+          <input type="text" name="message" placeholder="message" />
+          <button type="submit" id="submit-btn">Submit</button>
+        </form>
+        <button type="button" id="send-location">Send Location</button>
+      </dd>
+    </dl>
+  </div>
+
+  <!-- message template -->
+  <script id="message-template" type="text/template">
+    <dl>
+      <dt>{{from}}</dt>
+      <dd>{{createdAt}}</dd>
+    </dl>
+    <p>{{text}}</p>
+  </script>
+
+  <!-- location message template -->
+  <script id="location-message-template" type="text/template">
+    <dl>
+      <dt>{{from}}</dt>
+      <dd>{{createdAt}}</dd>
+    </dl>
+    Link : <a href="{{url}}" target="_blank" title="move page">My Current Location</a>
+  </script>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/libs/moment.js"></script>
+  <script src="/js/libs/mustache.js"></script>
+  <script src="/js/chat.js"></script>
+  
+</body>
+</html>
