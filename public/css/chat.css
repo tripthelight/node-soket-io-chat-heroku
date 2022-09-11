@@ -25,6 +25,7 @@ dl.people-block dt h4 {
 dl.people-block dd {
   flex-grow: 1;
   overflow-y: auto;
+  padding-top: 10px;
 }
 dl.people-block dd ul {
   display: block;
@@ -35,6 +36,9 @@ dl.people-block dd ul li {
   background-color: #FFF;
   box-sizing: border-box;
   margin-top: 10px;
+  border-radius: 8px;
+  word-wrap: break-word;
+  word-break: keep-all;
 }
 dl.people-block dd ul li:first-child {
   margin-top: 0;

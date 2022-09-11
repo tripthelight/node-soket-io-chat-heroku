@@ -24,6 +24,19 @@ socket.on('disconnect', function () {
   console.log('disconnect from Server');
 });
 
+socket.on('updateUsersList', function(users) {
+  let usersWrap = document.createElement('ul');
+  users.forEach(function(user) {
+    let li = document.createElement('li');
+    li.innerHTML = user;
+    usersWrap.appendChild(li);
+  });
+
+  let usersList = document.getElementById('users');
+  usersList.innerHTML = '';
+  usersList.appendChild(usersWrap);
+});
+
 /**
  * document draw message in li
  */
